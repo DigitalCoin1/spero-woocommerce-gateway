@@ -36,7 +36,7 @@ class CoinGecko_API {
     }
 
     public static function get_dero_exchange_rate($currency) {
-        return self::request('simple/price?ids=dero&vs_currencies=' . $currency)['dero'][strtolower($currency)];
+        return self::request('simple/price?ids=sperocoin&vs_currencies=' . $currency)['sperocoin'][strtolower($currency)];
     }
 }
 ?>

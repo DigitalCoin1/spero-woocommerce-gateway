@@ -39,7 +39,7 @@ function dero_gateway_init() {
 
             $this->enabled = $this->get_option('enabled');
             $this->title = $this->get_option('title');
-		    $this->description = $this->get_option('description');
+            $this->description = $this->get_option('description');
             $this->discount = $this->get_option('discount');
             $this->order_valid_time = $this->get_option('order_valid_time');
             $this->confirmations = $this->get_option('confirmations');
@@ -350,7 +350,7 @@ function dero_cron_add_one_minute($schedules) {
 add_filter('cron_schedules', 'dero_cron_add_one_minute');
 
 function check_dero_payments() {
-	global $wpdb;
+    global $wpdb;
     $table_name = $wpdb->prefix . 'dero_gateway_payments';
     $results = $wpdb->get_results("SELECT order_id, payment_id, dero_total, height_at_creation, TIMESTAMPDIFF(SECOND, creation_time, NOW()) as seconds_passed FROM $table_name WHERE status='on-hold' OR status='pending'");
 
