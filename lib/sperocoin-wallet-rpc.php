@@ -6,11 +6,11 @@ require_once(SPEROCOIN_GATEWAY_PLUGIN_DIR . '/lib/util/admin-error.php');
 class SPEROCOIN_Wallet_RPC {
     // Default values that will be edited once the setup function is called inside the SPEROCOIN_Gateway constructor
     private static $host = '127.0.0.1';
-    private static $port = 20209;
+    private static $port = 55681;
     private static $login_required = false;
     private static $username = '';
     private static $password = '';
-    private static $url = '127.0.0.1:20209/json_rpc';
+    private static $url = '127.0.0.1:55681/json_rpc';
 
     public static function setup($host, $port, $login_required, $username, $password) {
         self::$host = $host;

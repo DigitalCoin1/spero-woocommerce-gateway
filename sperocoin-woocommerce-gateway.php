@@ -111,7 +111,7 @@ function sperocoin_gateway_init() {
                     'title' => __('SPEROCOIN Wallet RPC Port', 'sperocoin_gateway'),
                     'type' => __('number'),
                     'description' => __('Wallet RPC port used to connect to the wallet in order to verify transactions.', 'sperocoin_gateway'),
-                    'default' => 20209,
+                    'default' => 55681,
                     'desc_tip' => true
                 ),
                 'wallet_login_required' => array(
