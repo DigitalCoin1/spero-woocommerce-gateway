@@ -1,10 +1,10 @@
 <?php
 defined('ABSPATH') || exit;
 
-require_once(DERO_GATEWAY_PLUGIN_DIR . '/lib/util/admin-error.php');
+require_once(SPEROCOIN_GATEWAY_PLUGIN_DIR . '/lib/util/admin-error.php');
 
-class DERO_Wallet_RPC {
-    // Default values that will be edited once the setup function is called inside the DERO_Gateway constructor
+class SPEROCOIN_Wallet_RPC {
+    // Default values that will be edited once the setup function is called inside the SPEROCOIN_Gateway constructor
     private static $host = '127.0.0.1';
     private static $port = 20209;
     private static $login_required = false;
@@ -68,10 +68,10 @@ class DERO_Wallet_RPC {
 
         $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         if($http_code != 200)
-            admin_error('DERO Wallet RPC HTTP Response Code: ' . $http_code);
+            admin_error('SPEROCOIN Wallet RPC HTTP Response Code: ' . $http_code);
 
         if(curl_errno($ch) > 0)
-            admin_error('Failed to connect to DERO Wallet RPC at ' . self::$host . ':' .self::$port);
+            admin_error('Failed to connect to SPEROCOIN Wallet RPC at ' . self::$host . ':' .self::$port);
 
         curl_close($ch);
 

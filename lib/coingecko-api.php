@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 
-require_once(DERO_GATEWAY_PLUGIN_DIR . '/lib/util/admin-error.php');
+require_once(SPEROCOIN_GATEWAY_PLUGIN_DIR . '/lib/util/admin-error.php');
 
 class CoinGecko_API {
     private static $url = 'https://api.coingecko.com/api/v3/';
@@ -35,7 +35,7 @@ class CoinGecko_API {
         return self::request('simple/supported_vs_currencies');
     }
 
-    public static function get_dero_exchange_rate($currency) {
+    public static function get_sperocoin_exchange_rate($currency) {
         return self::request('simple/price?ids=sperocoin&vs_currencies=' . $currency)['sperocoin'][strtolower($currency)];
     }
 }
